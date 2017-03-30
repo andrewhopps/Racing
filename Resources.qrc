@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/Resources/Images">
+        <file>Resources/Images/AddTrack2.png</file>
+        <file>Resources/Images/NewCar.png</file>
+        <file>Resources/Images/CircleGreen.png</file>
+        <file>Resources/Images/CircleRed.png</file>
+        <file>Resources/Images/CircleYellow.png</file>
+        <file>Resources/Images/64.png</file>
+        <file>Resources/Images/61.png</file>
+        <file>Resources/Images/62.png</file>
+        <file>../../Racing/Add.png</file>
+        <file>../../Racing/Delete.png</file>
+        <file>../../Racing/Edit.png</file>
+    </qresource>
+</RCC>
