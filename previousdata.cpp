@@ -7,8 +7,6 @@ PreviousData::PreviousData(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    //Test
-
 }
 
 PreviousData::~PreviousData()
