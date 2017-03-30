@@ -8,8 +8,5 @@
         <file>Resources/Images/64.png</file>
         <file>Resources/Images/61.png</file>
         <file>Resources/Images/62.png</file>
-        <file>../../Racing/Add.png</file>
-        <file>../../Racing/Delete.png</file>
-        <file>../../Racing/Edit.png</file>
     </qresource>
 </RCC>
