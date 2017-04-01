@@ -15,6 +15,11 @@ public:
     explicit PreviousData(QWidget *parent = 0);
     ~PreviousData();
 
+private slots:
+    void on_closeButton_clicked();
+
+    void on_printButton_clicked();
+
 private:
     Ui::PreviousData *ui;
 };

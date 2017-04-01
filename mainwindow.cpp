@@ -6,6 +6,7 @@
 #include "documentation.h"
 #include "viewtable.h"
 #include "racetype.h"
+#include "previousdata.h"
 
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -176,5 +177,7 @@ void MainWindow::on_actionUser_Defined_Entries_triggered()
 
 void MainWindow::on_actionPrevious_Information_triggered()
 {
-
+    PreviousData pd;
+    pd.setModal(true);
+    pd.exec();
 }
