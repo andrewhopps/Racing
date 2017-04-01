@@ -15,15 +15,20 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    scene = new QGraphicsScene(this);
-    ui->graphicsView->setScene(scene);
-
-    ui->tabWidget->setCurrentIndex(0);
-
     db = QSqlDatabase::addDatabase("QSQLITE");
     aPath = qApp->applicationDirPath();
     dPath = aPath + "/RacingInfo.sqlite";
 
+
+    //QPixmap pix(":/Resources/Images/Resources/Images/25ModifiedPlaceHolder.png");
+    //ui->status->setPixmap(pix);
+
+
+    ui->scrollAreaWidgetContents->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
+    ui->scrollAreaWidgetContents->resize(ui->scrollArea->size().width() ,ui->scrollArea->size().height());
+    ui->scrollArea->setWidgetResizable(true);
+    ui->scrollArea->setWidget(ui->scrollAreaWidgetContents);
+    ui->scrollAreaWidgetContents->adjustSize();
 
 
     if(dbExists())
@@ -36,8 +41,6 @@ MainWindow::MainWindow(QWidget *parent) :
 
     }
     else{
-        QPixmap pix(":/Resources/Images/Resources/Images/CircleRed.png");
-        ui->status->setPixmap(pix);
         qDebug()<<"Database Not Open.";
         return;
     }
@@ -54,7 +57,7 @@ MainWindow::~MainWindow()
 }
 
 
-
+/*
 void MainWindow::on_pushButton_2_clicked()
 {
 
@@ -74,6 +77,7 @@ void MainWindow::on_pushButton_2_clicked()
 
 
 }
+*/
 
 void MainWindow::on_exitButton_clicked()
 {
@@ -133,7 +137,7 @@ void MainWindow::on_actionNew_triggered()
 
 
 
-
+/*
 void MainWindow::on_tabWidget_tabBarClicked(int index)
 {
     if(index == 0)
@@ -162,6 +166,7 @@ void MainWindow::on_tabWidget_tabBarClicked(int index)
         qDebug()<<"Other Tab";
     }
 }
+*/
 
 void MainWindow::on_actionCheck_for_Update_triggered()
 {
@@ -180,4 +185,9 @@ void MainWindow::on_actionPrevious_Information_triggered()
     PreviousData pd;
     pd.setModal(true);
     pd.exec();
+}
+
+void MainWindow::on_pushButton_5_clicked()
+{
+
 }

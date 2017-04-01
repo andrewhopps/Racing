@@ -9,7 +9,7 @@
 #include <QSqlQuery>
 #include "ui_mainwindow.h"
 #include "car.h"
-
+#include <QHBoxLayout>
 
 
 namespace Ui {
@@ -23,8 +23,8 @@ class MainWindow : public QMainWindow
 
 public:
 
-    QGraphicsScene *scene;
-    QGraphicsRectItem *rect;
+    //QGraphicsScene *scene;
+    //QGraphicsRectItem *rect;
 
     QSqlDatabase db;
     QString aPath;
@@ -183,7 +183,7 @@ public:
 
 private slots:
 
-    void on_pushButton_2_clicked();
+//    void on_pushButton_2_clicked();
 
     void on_exitButton_clicked();
 
@@ -201,13 +201,15 @@ private slots:
 
     void on_actionNew_triggered();
 
-    void on_tabWidget_tabBarClicked(int index);
+//    void on_tabWidget_tabBarClicked(int index);
 
     void on_actionCheck_for_Update_triggered();
 
     void on_actionUser_Defined_Entries_triggered();
 
     void on_actionPrevious_Information_triggered();
+
+    void on_pushButton_5_clicked();
 
 private:
     QSqlQueryModel * modal= nullptr;

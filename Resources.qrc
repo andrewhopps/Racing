@@ -8,5 +8,11 @@
         <file>Resources/Images/64.png</file>
         <file>Resources/Images/61.png</file>
         <file>Resources/Images/62.png</file>
+        <file>Resources/Images/25ModifiedPlaceHolder.png</file>
+        <file>Resources/Images/50ModifiedPlaceHolder.png</file>
+        <file>Resources/Images/75ModifiedPlaceHolder.png</file>
+        <file>Resources/Images/100ModifiedPlaceHolder.png</file>
+        <file>Resources/Images/cropped-checkered-flag-icon.png</file>
+        <file>Resources/Images/Add2.png</file>
     </qresource>
 </RCC>
