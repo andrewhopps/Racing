@@ -15,6 +15,9 @@ PreviousData::PreviousData(QWidget *parent) :
     ui->avgTimeBox->setAlignment(Qt::AlignCenter);
     ui->avgTimeBox->setText("0026508");
 
+
+
+
 }
 
 PreviousData::~PreviousData()
@@ -28,6 +31,11 @@ void PreviousData::on_closeButton_clicked()
 }
 
 void PreviousData::on_printButton_clicked()
+{
+
+}
+
+void PreviousData::on_comboBox_currentIndexChanged(const QString &arg1)
 {
 
 }

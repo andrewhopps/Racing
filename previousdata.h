@@ -20,6 +20,8 @@ private slots:
 
     void on_printButton_clicked();
 
+    void on_comboBox_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::PreviousData *ui;
 };

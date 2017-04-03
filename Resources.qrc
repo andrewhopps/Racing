@@ -14,5 +14,6 @@
         <file>Resources/Images/100ModifiedPlaceHolder.png</file>
         <file>Resources/Images/cropped-checkered-flag-icon.png</file>
         <file>Resources/Images/Add2.png</file>
+        <file>Resources/Images/carButton.png</file>
     </qresource>
 </RCC>

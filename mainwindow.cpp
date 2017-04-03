@@ -20,17 +20,6 @@ MainWindow::MainWindow(QWidget *parent) :
     dPath = aPath + "/RacingInfo.sqlite";
 
 
-    //QPixmap pix(":/Resources/Images/Resources/Images/25ModifiedPlaceHolder.png");
-    //ui->status->setPixmap(pix);
-
-
-    ui->scrollAreaWidgetContents->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
-    ui->scrollAreaWidgetContents->resize(ui->scrollArea->size().width() ,ui->scrollArea->size().height());
-    ui->scrollArea->setWidgetResizable(true);
-    ui->scrollArea->setWidget(ui->scrollAreaWidgetContents);
-    ui->scrollAreaWidgetContents->adjustSize();
-
-
     if(dbExists())
     {
         if(!db.isOpen())
@@ -45,10 +34,7 @@ MainWindow::MainWindow(QWidget *parent) :
         return;
     }
 
-
-
 }
-
 
 
 MainWindow::~MainWindow()
@@ -56,28 +42,6 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-/*
-void MainWindow::on_pushButton_2_clicked()
-{
-
-    foreach(QLineEdit* le, findChildren<QLineEdit*>()) {
-       le->clear();
-    }
-
-    foreach(QPlainTextEdit* pte, findChildren<QPlainTextEdit*>()) {
-       pte->clear();
-    }
-
-    foreach(QComboBox* cb, findChildren<QComboBox*>()) {
-       cb->setCurrentIndex(0);
-    }
-
-    ui->wreckCheckbox->setChecked(false);
-
-
-}
-*/
 
 void MainWindow::on_exitButton_clicked()
 {
@@ -189,5 +153,20 @@ void MainWindow::on_actionPrevious_Information_triggered()
 
 void MainWindow::on_pushButton_5_clicked()
 {
+
+}
+
+void MainWindow::on_pushButton_7_clicked()
+{
+//    QHBoxLayout *hlayout = new QHBoxLayout(ui->frame_2); //sets layout on existing frame
+//    QPushButton *newCar = new QPushButton(); //creates new button
+//    newCar->setStyleSheet("background-color: rgb(240, 240, 240);"
+//                          "background-image: url(:/Resources/Images/Resources/Images/carButton.png);"
+//                          "background-repeat: no-repeat;"
+//                          "background-attachment: fixed;"
+//                          "background-position: center;");
+//    newCar->setFixedSize(213, 108); // Sets button size
+//    newCar->setIconSize(QSize(200,100)); //Sets icon size
+//    hlayout->addWidget(newCar); //places new button into frame
 
 }

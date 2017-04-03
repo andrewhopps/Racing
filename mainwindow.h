@@ -58,8 +58,56 @@ public:
         racetypeModal->setQuery("SELECT type FROM RaceType WHERE rowid >= 1");
         ui->raceSelect->setCurrentIndex(0);
 
+        checkCars();
 
      }
+
+   void newCarClicked(int index){
+       switch(index){
+       case 0:{
+           qDebug() << "First";
+           break;
+       }
+       case 1:
+           qDebug() << "Second";
+           break;
+       default:break;
+
+   }
+   }
+
+
+    void checkCars()
+    {
+        QHBoxLayout *hlayout = new QHBoxLayout();
+        ui->scrollArea_2->setWidget(ui->frame);
+        ui->frame->setLayout(hlayout);
+
+        QSqlQuery *qry = new QSqlQuery(db);
+        qry->prepare("SELECT type || ' ' || number FROM Car WHERE rowid >= 2");
+        if(qry->exec())
+        {
+            int index = 0;
+            while(qry->next())
+            {
+            QString cName;
+            cName = qry->value(0).toString();
+            QPushButton *newCar = new QPushButton(cName);
+            newCar->setStyleSheet("background-color: rgb(240, 240, 240);"
+                                  "background-image: url(:/Resources/Images/Resources/Images/carButton.png);"
+                                  "background-repeat: no-repeat;"
+                                  "background-attachment: fixed;"
+                                  "background-position: center;");
+            newCar->setFixedSize(213, 108);
+            newCar->setIconSize(QSize(200,100));
+            hlayout->addWidget(newCar);
+            connect(newCar, &QPushButton::clicked, newCar, [=]{newCarClicked(index);});
+            index++;
+            }
+        }
+
+    }
+
 
     bool dbExists()
     {
@@ -210,6 +258,8 @@ private slots:
     void on_actionPrevious_Information_triggered();
 
     void on_pushButton_5_clicked();
+
+    void on_pushButton_7_clicked();
 
 private:
     QSqlQueryModel * modal= nullptr;
